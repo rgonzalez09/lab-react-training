@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import IdCard from './components/idcard/IdCard';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <IdCard
+        firstName="John"
+        lastName="Doe"
+        gender="male"
+        height="1.78m"
+        birth={new Date('1992-07-14')}
+        img="https://randomuser.me/api/portraits/men/44.jpg"
+      />
+      <IdCard
+        firstName="Obrien"
+        lastName="Delores"
+        gender="female"
+        height="1.72"
+        birth={new Date('1988-05-11')}
+        img="https://randomuser.me/api/portraits/women/44.jpg"
+      />
     </div>
   );
 }
